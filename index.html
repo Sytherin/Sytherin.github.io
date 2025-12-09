@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Kent Cajes - BSIS Student Portfolio">
+    <title>Kent Cajes - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Portfolio</div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="nav-brand">
+                <a href="index.html">Kent Cajes</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Info</a></li>
+                <li><a href="photos.html">Photos</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -27,99 +29,57 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Kent Cajes</span></h1>
-                <p class="hero-subtitle">Student & Creative Problem Solver</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <div class="hero-wrapper">
+                <div class="hero-image-container">
+                    <div class="profile-image-wrapper">
+                        <img src="images/profile.jpg" alt="Kent Cajes" class="profile-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23333%22 width=%22200%22 height=%22200%22/%3E%3Ctext fill=%22%23999%22 font-family=%22sans-serif%22 font-size=%2218%22 dy=%2210.5%22 font-weight=%22bold%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22%3EKC%3C/text%3E%3C/svg%3E'">
+                    </div>
                 </div>
-                <div class="social-links">
-                    <a href="https://github.com/Sytherin" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am a Bachelor of Science in Information Systems (BSIS) student who loves to learn to code and build innovative solutions. I enjoy bringing ideas to life through programming and exploring new technologies.</p>
-                    <p>When I'm not coding, you can find me learning new programming languages, working on projects, or exploring different frameworks and tools to expand my skills.</p>
-                </div>
-                <div class="skills">
-                    <h3>Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">C++</div>
-                        <div class="skill-item">Python</div>
-                        <div class="skill-item">HTML/CSS</div>
-                        <div class="skill-item">Vue.js</div>
-                        <div class="skill-item">Laravel</div>
-                        <div class="skill-item">MySQL</div>
+                <div class="text">
+                    <h2>Hello, World!</h2>
+                    <h3>I'm</h3>
+                    <h1>Kent Cajes</h1>
+                    <h2>Here to <span class="animated-text"></span></h2>
+                    <div class="hero-buttons">
+                        <a href="about.html" class="btn btn-primary">Learn More</a>
+                        <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Skills Preview -->
+    <section class="skills-preview">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <p class="section-subtitle">Projects from GitHub</p>
-            <div id="projects-container" class="projects-grid">
-                <div class="project-card loading">
-                    <div class="project-skeleton">
-                        <div class="skeleton-header"></div>
-                        <div class="skeleton-body"></div>
-                        <div class="skeleton-footer"></div>
-                    </div>
+            <h2 class="section-title">Technologies I Learned With</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Vue.js</h3>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">I'm always open to discussing new projects and opportunities</p>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:your.kentcajes031@gmail.com">kentcajes031@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/Sytherin" target="_blank">github.com/Sytherin</a>
-                    </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Laravel</h3>
                 </div>
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Kent Cajes" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="kentcajes031@gmail.com" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="your message here" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>C++</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>MySQL</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>HTML & CSS</h3>
+                </div>
             </div>
         </div>
     </section>
@@ -128,10 +88,13 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Kent Cajes. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/Sytherin" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
 
